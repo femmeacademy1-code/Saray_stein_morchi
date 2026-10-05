@@ -87,9 +87,11 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
 }
 /* ---- Mobile (phones): tighter spacing, one-row nav, stacked buttons, 2-column topic cards ---- */
 @media (max-width: 640px) {
-    .clinic-photos { width: min(340px, 100%) !important; aspect-ratio: 340 / 400 !important; }
-  #clinic figure:first-of-type { width: 62% !important; }
-  #clinic figure:last-of-type { width: 46% !important; }
+    .clinic-photos { width: min(340px, 100%) !important; aspect-ratio: 340 / 340 !important; }
+  #clinic figure:first-of-type { width: 72% !important; }
+  #clinic figure:last-of-type { width: 40% !important; }
+  #clinic .vine-m { width: 34px !important; top: -4px !important; left: 6px !important; }
+  #clinic .clinic-lead { font-size: 23px !important; margin-bottom: 26px !important; }
   #clinic > div { padding-top: 36px !important; padding-bottom: 44px !important; }
   .portrait-round { width: 104px !important; height: 104px !important; }
   .about-art { display: none !important; }
@@ -300,12 +302,13 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
 
   <section id="clinic" data-screen-label="Clinic">
     <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 64px);">
-      <div class="clinic-photos" style="position: relative; margin: 0 auto; width: min(560px, 100%); aspect-ratio: 560 / 470;">
+      <p class="clinic-lead" style="margin: 0 auto 36px; text-align: center; max-width: 30ch; font-family: 'Frank Ruhl Libre', serif; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.5;">מקבלת בפרדס חנה בקליניקה פרטית ונעימה, וגם באונליין</p>
+      <div class="clinic-photos" style="position: relative; margin: 0 auto; width: min(560px, 100%); aspect-ratio: 560 / 450;">
         <svg class="vine vine-m" viewBox="0 0 80 340" aria-hidden="true" style="position: absolute; top: -10px; left: 4px; width: 46px; height: auto; pointer-events: none;" fill="none" stroke="#566B45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M40 -5 S47.5 25.0 45.9 50.0 S34.2 75.0 37.3 100.0 S45.5 125.0 41.9 150.0 S33.3 175.0 35.6 200.0 S48.4 225.0 47.8 250.0 S31.0 275.0 31.0 300.0"></path><path d="M45.9 50.0 q6 2 9 8"></path><g transform="translate(54.9 58.0) rotate(145) scale(0.32)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="4.69"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="3.13"></path></g><path d="M37.3 100.0 q-6 2 -9 8"></path><g transform="translate(28.3 108.0) rotate(-133) scale(0.38)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="3.95"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="2.63"></path></g><path d="M41.9 150.0 q6 2 9 8"></path><g transform="translate(50.9 158.0) rotate(146) scale(0.44)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="3.41"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="2.27"></path></g><path d="M35.6 200.0 q-6 2 -9 8"></path><g transform="translate(26.6 208.0) rotate(-134) scale(0.32)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="4.69"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="3.13"></path></g><path d="M47.8 250.0 q6 2 9 8"></path><g transform="translate(56.8 258.0) rotate(147) scale(0.38)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="3.95"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="2.63"></path></g><path d="M31.0 300.0 q-6 2 -9 8"></path><g transform="translate(22.0 308.0) rotate(-135) scale(0.51)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="2.96"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="1.98"></path></g></svg>
-        <figure class="washed" style="position: absolute; top: 0; right: 0; width: 58%; aspect-ratio: 3 / 4; margin: 0; border-radius: 6px; overflow: hidden;">
-          <img src="assets/clinic-room.jpeg" alt="תמונה של הקליניקה" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <figure class="washed" style="position: absolute; top: 0; right: 0; width: 76%; aspect-ratio: 4 / 3; margin: 0; border-radius: 6px; overflow: hidden;">
+          <img src="assets/clinic-chairs.jpg" alt="הקליניקה: שתי כורסאות טיפול" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
         </figure>
-        <figure class="washed" style="position: absolute; bottom: 0; left: 0; width: 44%; aspect-ratio: 3 / 4; margin: 0; border-radius: 6px; overflow: hidden; border: 6px solid #F3EDE0; box-sizing: content-box;">
+        <figure class="washed" style="position: absolute; bottom: 0; left: 0; width: 36%; aspect-ratio: 3 / 4; margin: 0; border-radius: 6px; overflow: hidden; border: 6px solid #F3EDE0; box-sizing: content-box;">
           <img src="assets/clinic-chair.jpeg" alt="פינת הטיפול" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
         </figure>
       </div>
@@ -427,7 +430,7 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
     '#approach > div > h2, #approach > div > p, #approach > div > div > div',
     '#about > div > div, .portrait-round',
     '#topics h2, #topics div[style*="repeat(auto-fit"] > div',
-    '#contact .c-text > *, #contact .c-btns > a, #clinic figure'
+    '#contact .c-text > *, #contact .c-btns > a, #clinic .clinic-lead, #clinic figure'
   ];
   var fig=document.querySelectorAll('#clinic figure');
   var io=new IntersectionObserver(function(es){es.forEach(function(e){
