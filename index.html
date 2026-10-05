@@ -62,6 +62,8 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
 #top .h1 { animation: pulse 3.2s ease-out 2.6s infinite; }
 .vine { transform-origin: 50% 0; animation: sway 5s ease-in-out infinite; }
 .waves { animation: fadein 2s ease both; }
+.mark-m { display: none; }
+.vine-m { display: none; }
 .emblem { animation: breathe 6s ease-in-out 3.4s infinite; }
 .emblem circle, .emblem path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 2.4s ease .5s forwards; }
 @keyframes draw { to { stroke-dashoffset: 0; } }
@@ -79,17 +81,19 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
 }
 
 @media (min-width: 820px) {
-  #contact .c-grid { grid-template-columns: 1fr 1fr !important; grid-template-areas: "text btns" "photos btns"; }
+  #contact .c-grid { grid-template-columns: 1fr 1fr !important; grid-template-areas: "text btns"; }
   #contact .c-text { grid-area: text; }
   #contact .c-btns { grid-area: btns; align-self: start; }
-  #contact .c-photos { grid-area: photos; margin-top: 8px; }
 }
 /* ---- Mobile (phones): tighter spacing, one-row nav, stacked buttons, 2-column topic cards ---- */
 @media (max-width: 640px) {
-    .vine { left: -36px !important; width: 42px !important; top: -40px !important; }
+    .clinic-photos { width: min(340px, 100%) !important; aspect-ratio: 340 / 400 !important; }
+  #clinic figure:first-of-type { width: 62% !important; }
+  #clinic figure:last-of-type { width: 46% !important; }
+  #clinic > div { padding-top: 36px !important; padding-bottom: 44px !important; }
   .portrait-round { width: 104px !important; height: 104px !important; }
   .about-art { display: none !important; }
-  .c-photos { width: min(340px, 100%) !important; margin: 4px auto 0; }
+  .vine-m { display: block !important; }
   body > div { font-size: 17px !important; }
   html { scroll-padding-top: 112px; }
   header > div { padding-top: 12px !important; padding-bottom: 8px !important; gap: 6px !important; }
@@ -106,7 +110,9 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
   #top p { font-size: 19px !important; }
   #top .h1, #top .h2 { flex: 1 1 100%; text-align: center; box-sizing: border-box; }
   #top > div > div:first-child > div:last-child { margin-top: 28px !important; gap: 12px !important; }
-  #top > div > div:last-child { width: 230px !important; }
+  #top > div > div:last-child { display: none !important; }
+  .mark-m { display: block !important; width: 84px !important; height: 84px !important; flex: none; margin-inline-start: auto; }
+  #top > div { padding-bottom: 36px !important; gap: 0 !important; }
   section[data-screen-label="Intro"] svg:not(.vine) { width: 120px !important; margin-bottom: 18px !important; }
   section[data-screen-label="Intro"] p[style*="Frank"] { font-size: 24px !important; }
   #approach h2, #about h2 { font-size: 30px !important; }
@@ -172,6 +178,7 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
         <div style="display: flex; align-items: center; gap: 22px;">
           
           <p style="margin: 0; font-size: clamp(20px, 1.9vw, 23px); line-height: 1.65; flex: 1; max-width: 32ch; text-align: right">בקליניקה בפרדס חנה-כרכור מחכה לך מרחב בטוח, מכיל ומחבר לפגוש בו את עצמך.</p>
+          <svg class="emblem mark-m" viewBox="0 0 160 160" aria-hidden="true" fill="none" stroke="#566B45" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle pathLength="1" cx="80" cy="80" r="66"></circle><path pathLength="1" d="M80 134 C78 118 80 106 80 98"></path><g transform="translate(80 98) rotate(-50)"><path pathLength="1" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z"></path></g><g transform="translate(80 98) rotate(50)"><path pathLength="1" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z"></path></g></svg>
         </div>
         <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 40px;">
           <a class="h1" href="#contact" style="text-decoration: none; background: #566B45; color: #F3EDE0; font-weight: 700; font-size: 17px; padding: 14px 30px; border-radius: 4px;">לתיאום פגישת היכרות</a>
@@ -290,6 +297,20 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
     </div>
   </section>
 
+  <section id="clinic" data-screen-label="Clinic">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 64px);">
+      <div class="clinic-photos" style="position: relative; margin: 0 auto; width: min(560px, 100%); aspect-ratio: 560 / 470;">
+        <svg class="vine vine-m" viewBox="0 0 80 340" aria-hidden="true" style="position: absolute; top: -10px; left: 4px; width: 46px; height: auto; pointer-events: none;" fill="none" stroke="#566B45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M40 -5 S47.5 25.0 45.9 50.0 S34.2 75.0 37.3 100.0 S45.5 125.0 41.9 150.0 S33.3 175.0 35.6 200.0 S48.4 225.0 47.8 250.0 S31.0 275.0 31.0 300.0"></path><path d="M45.9 50.0 q6 2 9 8"></path><g transform="translate(54.9 58.0) rotate(145) scale(0.32)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="4.69"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="3.13"></path></g><path d="M37.3 100.0 q-6 2 -9 8"></path><g transform="translate(28.3 108.0) rotate(-133) scale(0.38)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="3.95"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="2.63"></path></g><path d="M41.9 150.0 q6 2 9 8"></path><g transform="translate(50.9 158.0) rotate(146) scale(0.44)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="3.41"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="2.27"></path></g><path d="M35.6 200.0 q-6 2 -9 8"></path><g transform="translate(26.6 208.0) rotate(-134) scale(0.32)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="4.69"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="3.13"></path></g><path d="M47.8 250.0 q6 2 9 8"></path><g transform="translate(56.8 258.0) rotate(147) scale(0.38)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="3.95"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="2.63"></path></g><path d="M31.0 300.0 q-6 2 -9 8"></path><g transform="translate(22.0 308.0) rotate(-135) scale(0.51)"><path fill="#D3DAC3" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z" stroke-width="2.96"></path><path d="M0 -3 C0 -20 0 -36 0 -50" stroke-width="1.98"></path></g></svg>
+        <figure class="washed" style="position: absolute; top: 0; right: 0; width: 58%; aspect-ratio: 3 / 4; margin: 0; border-radius: 6px; overflow: hidden;">
+          <img src="assets/clinic-room.jpeg" alt="תמונה של הקליניקה" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </figure>
+        <figure class="washed" style="position: absolute; bottom: 0; left: 0; width: 44%; aspect-ratio: 3 / 4; margin: 0; border-radius: 6px; overflow: hidden; border: 6px solid #F3EDE0; box-sizing: content-box;">
+          <img src="assets/clinic-chair.jpeg" alt="פינת הטיפול" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" data-screen-label="Contact" style="background: #566B45; color: #F3EDE0;">
     <div class="c-grid" style="max-width: 1160px; margin: 0 auto; padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(32px, 6vw, 96px); align-items: start;">
       <div class="c-text">
@@ -311,15 +332,6 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
           <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 26px; height: 26px; flex: none;" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
           <span style="display: grid; line-height: 1.3;"><span style="font-weight: 700; font-size: 20px;">שלחו מייל</span><span dir="ltr" style="font-size: 15px; text-align: right;">Saraysht@gmail.com</span></span>
         </a>
-      </div>
-    
-      <div class="c-photos" style="position: relative; width: min(380px, 100%); aspect-ratio: 380 / 350;">
-        <figure class="washed" style="position: absolute; top: 0; right: 0; width: 56%; aspect-ratio: 3 / 4; margin: 0; border-radius: 6px; overflow: hidden;">
-          <img src="assets/clinic-room.jpeg" alt="תמונה של הקליניקה" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </figure>
-        <figure class="washed" style="position: absolute; bottom: 0; left: 0; width: 42%; aspect-ratio: 3 / 4; margin: 0; border-radius: 6px; overflow: hidden; border: 5px solid #F3EDE0; box-sizing: content-box;">
-          <img src="assets/clinic-chair.jpeg" alt="פינת הטיפול" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </figure>
       </div>
     </div>
   </section>
@@ -414,9 +426,9 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
     '#approach > div > h2, #approach > div > p, #approach > div > div > div',
     '#about > div > div, .portrait-round',
     '#topics h2, #topics div[style*="repeat(auto-fit"] > div',
-    '#contact .c-text > *, #contact .c-btns > a, #contact figure'
+    '#contact .c-text > *, #contact .c-btns > a, #clinic figure'
   ];
-  var fig=document.querySelectorAll('#contact figure');
+  var fig=document.querySelectorAll('#clinic figure');
   var io=new IntersectionObserver(function(es){es.forEach(function(e){
     if(e.isIntersecting){e.target.classList.add('is-visible'); io.unobserve(e.target);}
   });},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
