@@ -100,12 +100,11 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
 }
 /* ---- Mobile (phones): tighter spacing, one-row nav, stacked buttons, 2-column topic cards ---- */
 @media (max-width: 640px) {
-    .clinic-photos { width: min(340px, 100%) !important; aspect-ratio: 340 / 330 !important; }
-  #clinic figure:first-of-type { width: 80% !important; right: 10% !important; }
-  #clinic figure:not(:first-of-type) { width: 36% !important; }
+  #clinic .clinic-one { width: min(300px, 100%) !important; }
   #clinic .clinic-lead { font-size: 23px !important; margin-bottom: 26px !important; }
   #clinic > div { padding-top: 36px !important; padding-bottom: 44px !important; }
-  .portrait-round { width: 104px !important; height: 104px !important; }
+  .portrait-round { width: 210px !important; height: 210px !important; }
+  .about-head { justify-content: center; text-align: center; }
   .about-art { display: none !important; }
   .vine-c { display: block !important; }
   body > div { font-size: 17px !important; }
@@ -175,7 +174,7 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
       </a>
       <nav style="display: flex; gap: 28px; flex-wrap: wrap; font-size: 16px; font-weight: 600;">
         <a href="#approach" style="text-decoration: none;">הגישה</a>
-        <a href="#about" style="text-decoration: none;">בואו נכיר</a>
+        <a href="#about" style="text-decoration: none;">קצת עליי</a>
         <a href="#topics" style="text-decoration: none;">תחומי טיפול</a>
         <a href="#contact" style="text-decoration: none;">יצירת קשר</a>
       </nav>
@@ -191,7 +190,7 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
         <div style="width: 56px; height: 2px; background: #8D9E73; margin: 32px 0;"></div>
         <div style="display: flex; align-items: center; gap: 22px;">
           
-          <p style="margin: 0; font-size: clamp(20px, 1.9vw, 23px); line-height: 1.65; flex: 1; max-width: 32ch; text-align: right">בקליניקה בפרדס חנה-כרכור מחכה לך מרחב בטוח, מכיל ומחבר לפגוש בו את עצמך.</p>
+          <p style="margin: 0; font-size: clamp(20px, 1.9vw, 23px); line-height: 1.65; flex: 1; max-width: 32ch; text-align: right">טיפול נפשי תהליכי בראיית גוף-נפש בקליניקה בפרדס חנה כרכור ובאונליין</p>
           <svg class="emblem mark-m" viewBox="0 0 160 160" aria-hidden="true" fill="none" stroke="#566B45" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle pathLength="1" cx="80" cy="80" r="66"></circle><path pathLength="1" d="M80 134 C78 118 80 106 80 98"></path><g transform="translate(80 98) rotate(-50)"><path pathLength="1" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z"></path></g><g transform="translate(80 98) rotate(50)"><path pathLength="1" d="M0 0 C-6 6 -22 5 -25 -8 C-28 -26 -12 -44 0 -58 C12 -44 28 -26 25 -8 C22 5 6 6 0 0 Z"></path></g></svg>
         </div>
         <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 40px;">
@@ -226,7 +225,7 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
       <p style="margin: 0; font-family: 'Frank Ruhl Libre', 'David', 'Times New Roman', serif; font-size: clamp(26px, 2.8vw, 34px); line-height: 1.5;">במרחב בטוח וקשוב, החיבור האנושי והקשב לחוויה הגופנית והרגשית מהווים את הבסיס לצמיחה ולשינוי.</p>
       </div>
       <div style="display: grid; gap: 20px; align-self: end;">
-        <p style="margin: 0;">בעבודתי הטיפולית אני מזמינה אותך לתהליך עומק בגישה דינאמית-התייחסותית המשלבת התבוננות פסיכו-גופנית.</p>
+        <p style="margin: 0;">בעבודתי הטיפולית אני מזמינה אותך לתהליך עומק בגישה דינמית-התייחסותית, המשלבת התבוננות גופנית.</p>
         <p style="margin: 0;">אני מאמינה גדולה בכך שהקשב לגוף והתבוננות במערכות היחסים בחיינו, בפרט זו הנוצרת בין המטופל למטפל, מאפשרים ליצור העמקה, חיבור, מודעות וקשר טיפולי בטוח ומשמעותי.</p>
       </div>
     </div>
@@ -260,11 +259,11 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
     <div style="max-width: 1160px; margin: 0 auto; padding: clamp(64px, 9vw, 128px) clamp(20px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(40px, 7vw, 112px); align-items: center;">
       <div>
         <div class="about-head" style="display: flex; align-items: center; gap: clamp(18px, 3vw, 32px); flex-wrap: wrap;">
-          <div class="washed portrait-round" style="width: 180px; height: 180px; flex: none; border-radius: 50%; overflow: hidden; border: 4px solid #F3EDE0; box-shadow: 0 0 0 2px #D8CAAE;">
-            <img src="assets/sarai-portrait.jpg" alt="תמונה של שָׂרַי" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; display: block;">
+          <div class="portrait-round" style="width: 290px; height: 290px; flex: none; border-radius: 50%; overflow: hidden; border: 5px solid #F3EDE0; box-shadow: 0 0 0 2px #D8CAAE;">
+            <img src="assets/sarai-portrait.jpg" alt="תמונה של שָׂרַי" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 24%; display: block;">
           </div>
           <div>
-            <h2 style="font-family: 'Frank Ruhl Libre', 'David', 'Times New Roman', serif; font-weight: 400; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.2; margin: 0;">בואו נכיר</h2>
+            <h2 style="font-family: 'Frank Ruhl Libre', 'David', 'Times New Roman', serif; font-weight: 400; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.2; margin: 0;">קצת עליי</h2>
             <p style="margin: 10px 0 0; font-family: 'Frank Ruhl Libre', 'David', 'Times New Roman', serif; font-size: 26px; color: #8D9E73;">נעים מאוד, אני שָׂרַי</p>
           </div>
         </div>
@@ -315,17 +314,9 @@ input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visib
   <section id="clinic" data-screen-label="Clinic">
     <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 64px);">
       <p class="clinic-lead" style="margin: 0 auto 36px; text-align: center; max-width: 30ch; font-family: 'Frank Ruhl Libre', 'David', 'Times New Roman', serif; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.5;">מקבלת בפרדס חנה בקליניקה פרטית ונעימה, וגם באונליין</p>
-      <div class="clinic-photos" style="position: relative; margin: 0 auto; width: min(560px, 100%); aspect-ratio: 560 / 500;">
-        <figure class="washed" style="position: absolute; top: 0; right: 11%; width: 78%; aspect-ratio: 4 / 3; margin: 0; border-radius: 6px; overflow: hidden;">
-          <img src="assets/clinic-chairs.jpg" alt="הקליניקה: שתי כורסאות טיפול" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </figure>
-        <figure class="washed" style="position: absolute; bottom: 0; left: 0; width: 34%; aspect-ratio: 3 / 4; margin: 0; border-radius: 6px; overflow: hidden; border: 6px solid #F3EDE0; box-sizing: content-box;">
-          <img src="assets/clinic-chair.jpeg" alt="פינת הטיפול" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </figure>
-        <figure class="washed" style="position: absolute; bottom: 0; right: 0; width: 34%; aspect-ratio: 3 / 4; margin: 0; border-radius: 6px; overflow: hidden; border: 6px solid #F3EDE0; box-sizing: content-box;">
-          <img src="assets/clinic-room.jpeg" alt="פינת ישיבה בקליניקה" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </figure>
-      </div>
+      <figure class="washed clinic-one" style="margin: 0 auto; width: min(400px, 100%); aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden;">
+        <img src="assets/clinic-chairs.jpg" alt="הקליניקה: שתי כורסאות טיפול" loading="lazy" onerror="this.style.visibility='hidden'" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </figure>
     </div>
   </section>
 
